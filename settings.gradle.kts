@@ -33,3 +33,6 @@ plugins {
 }
 
 include(":composeApp")
+include(":core:data")
+include(":core:database")
+include("core:model")
