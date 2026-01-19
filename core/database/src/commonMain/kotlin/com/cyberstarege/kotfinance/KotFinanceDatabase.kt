@@ -8,13 +8,13 @@ import androidx.sqlite.driver.bundled.BundledSQLiteDriver
 import com.cyberstarege.kotfinance.model.AccountEntity
 import com.cyberstarege.kotfinance.model.CategoryEntity
 import com.cyberstarege.kotfinance.model.TransactionEntity
-import com.cyberstarege.kotfinance.model.UserEntity
+import com.cyberstarege.kotfinance.model.GroupEntity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 
 @Database(
     entities = [
-        UserEntity::class,
+        GroupEntity::class,
         AccountEntity::class,
         CategoryEntity::class,
         TransactionEntity::class
