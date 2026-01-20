@@ -9,9 +9,9 @@ import androidx.room.PrimaryKey
     tableName = "accounts",
     foreignKeys = [
         ForeignKey(
-            entity = GroupEntity::class,
+            entity = AccountGroupEntity::class,
             parentColumns = ["id"],
-            childColumns = ["group_id"],
+            childColumns = ["account_group_id"],
             onDelete = ForeignKey.CASCADE
         )
     ]
@@ -19,8 +19,8 @@ import androidx.room.PrimaryKey
 data class AccountEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
-    @ColumnInfo(name = "group_id")
-    val groupId: Long,
+    @ColumnInfo(name = "account_group_id")
+    val accountGroupId: Long,
     val name: String,
     @ColumnInfo(name = "account_type")
     val accountType: AccountType,
