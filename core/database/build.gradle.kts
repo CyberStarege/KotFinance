@@ -12,7 +12,7 @@ kotlin {
     jvm()
 
     androidLibrary {
-        namespace = "com.cyberstarege.kotfinance.database"
+        namespace = "com.cyberstarege.kotfinance.core.database"
         compileSdk = 36
     }
 
@@ -22,6 +22,12 @@ kotlin {
             implementation(libs.androidx.room.runtime)
             implementation(libs.androidx.sqlite.bundled)
             implementation(libs.kotlinx.datetime)
+            implementation(project.dependencies.platform(libs.koin.bom))
+            implementation(libs.koin.core)
+        }
+
+        androidMain.dependencies {
+            implementation(libs.koin.android)
         }
     }
 }
