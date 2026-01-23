@@ -15,7 +15,11 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-
+            implementation(projects.kotfinance.core.data)
+            implementation(projects.kotfinance.core.model)
+            implementation(libs.koin.bom)
+            implementation(libs.koin.core)
+            implementation(libs.kotlinx.coroutines.core)
         }
     }
 }
