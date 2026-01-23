@@ -7,6 +7,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import com.cyberstarege.kotfinance.model.AccountGroupEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface AccountGroupDao {
@@ -14,7 +15,7 @@ interface AccountGroupDao {
     suspend fun insertGroup(group: AccountGroupEntity)
 
     @Query("SELECT * FROM account_groups")
-    suspend fun getAllGroups(): List<AccountGroupEntity>
+    fun getAllGroups(): Flow<List<AccountGroupEntity>>
 
     @Update
     suspend fun updateGroup(group: AccountGroupEntity)
