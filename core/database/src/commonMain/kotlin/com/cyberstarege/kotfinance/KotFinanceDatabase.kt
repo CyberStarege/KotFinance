@@ -7,6 +7,10 @@ import androidx.room.RoomDatabaseConstructor
 import androidx.room.TypeConverters
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
 import com.cyberstarege.kotfinance.converters.DateTimeConverter
+import com.cyberstarege.kotfinance.dao.AccountDao
+import com.cyberstarege.kotfinance.dao.AccountGroupDao
+import com.cyberstarege.kotfinance.dao.CategoryDao
+import com.cyberstarege.kotfinance.dao.TransactionDao
 import com.cyberstarege.kotfinance.model.AccountEntity
 import com.cyberstarege.kotfinance.model.CategoryEntity
 import com.cyberstarege.kotfinance.model.TransactionEntity
@@ -26,7 +30,10 @@ import kotlinx.coroutines.IO
 @TypeConverters(DateTimeConverter::class)
 @ConstructedBy(KotFinanceDatabaseConstructor::class)
 abstract class KotFinanceRoomDatabase : RoomDatabase() {
-
+    abstract fun getAccountGroupDao(): AccountGroupDao
+    abstract fun getAccountDao(): AccountDao
+    abstract fun getCategoryDao(): CategoryDao
+    abstract fun getTransactionDao(): TransactionDao
 }
 
 @Suppress("KotlinNoActualForExpect")
