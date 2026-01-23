@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface AccountGroupRepository {
     suspend fun addAccountGroup(accountGroup: AccountGroup)
-    suspend fun getAllAccountGroups(): Flow<List<AccountGroup>>
+    fun getAllAccountGroups(): Flow<List<AccountGroup>>
     suspend fun updateAccountGroup(accountGroup: AccountGroup)
     suspend fun deleteAccountGroup(accountGroup: AccountGroup)
 }

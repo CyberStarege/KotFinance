@@ -14,7 +14,7 @@ class AccountGroupRepositoryImpl(
         accountGroupDao.insertGroup(accountGroup.toAccountGroupEntity())
     }
 
-    override suspend fun getAllAccountGroups(): Flow<List<AccountGroup>> {
+    override fun getAllAccountGroups(): Flow<List<AccountGroup>> {
         return accountGroupDao.getAllGroups().map { it.map { it.toAccountGroup() } }
     }
 
