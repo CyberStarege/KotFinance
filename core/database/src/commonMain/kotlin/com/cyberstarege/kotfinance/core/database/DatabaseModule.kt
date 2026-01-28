@@ -6,7 +6,7 @@ import org.koin.dsl.module
 val databaseModule = module {
     single<KotFinanceRoomDatabase> {
         val builder = get<RoomDatabase.Builder<KotFinanceRoomDatabase>>()
-        getKotFinanceRoomDatabase()
+        getKotFinanceRoomDatabase(builder = builder)
     }
 
     single { get<KotFinanceRoomDatabase>().getAccountGroupDao() }
