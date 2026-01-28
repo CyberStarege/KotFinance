@@ -8,6 +8,8 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.AndroidUiModes.UI_MODE_NIGHT_YES
@@ -22,6 +24,21 @@ import org.koin.compose.viewmodel.koinViewModel
 @Composable
 fun GroupsScreen() {
     val groupsViewModel = koinViewModel<GroupsViewModel>()
+    val accountGroups by groupsViewModel.accountGroups.collectAsState()
+    GroupsScreen(
+        accountGroups = accountGroups,
+        onEdit = { },
+        onCreate = {
+            groupsViewModel.addGroup(
+                AccountGroup(
+                    name = "Новый кошелёк",
+                    description = "Описание",
+                    color = 0xFF4CAF50.toInt()
+                )
+            )
+        },
+        onNavigateToAccountGroup = { }
+    )
 }
 
 @Composable
