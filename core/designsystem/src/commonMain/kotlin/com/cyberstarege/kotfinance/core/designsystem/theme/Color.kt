@@ -10,7 +10,7 @@ val OnSecondaryContainerDarkMode = Color(0xFF94A3B8)
 val BackgroundDarkMode = Color(0xFF101C22)
 
 val SurfaceDarkMode = Color(0xFF182830)
-val SurfaceContainer = Color(0xFF64748B)
+val SurfaceContainer = Color(0xFF1D2931)
 val OnSurfaceDarkMode = Color(0xFFFFFFFF)
 val OnSurfaceVariantDarkMode = Color(0xFF94A3B8)
 
