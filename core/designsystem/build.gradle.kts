@@ -20,22 +20,6 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
 
-        withHostTestBuilder {
-
-        }
-
-
-        withDeviceTestBuilder {
-            sourceSetTreeName = "test"
-        }.configure {
-            instrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        }
-
-        localDependencySelection {
-            // For dependencies with multiple build types, select 'debug' first, and 'release' in case 'debug' is missing
-            selectBuildTypeFrom.set(listOf("debug", "release"))
-        }
-
         androidResources {
             enable = true
         }
