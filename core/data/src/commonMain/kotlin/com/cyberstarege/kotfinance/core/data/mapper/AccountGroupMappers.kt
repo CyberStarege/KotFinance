@@ -6,13 +6,19 @@ import com.cyberstarege.kotfinance.core.database.model.AccountGroupEntity
 fun AccountGroupEntity.toAccountGroup(): AccountGroup {
     return AccountGroup(
         id = id,
-        name = name
+        name = name,
+        description = description,
+        color = color,
+        icon = icon,
     )
 }
 
 fun AccountGroup.toAccountGroupEntity(): AccountGroupEntity {
     return AccountGroupEntity(
         id = id,
-        name = name
+        name = name,
+        description = description,
+        color = color,
+        icon = icon,
     )
 }
