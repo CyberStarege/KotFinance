@@ -16,8 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import org.jetbrains.compose.resources.painterResource
 
-import kotfinance.composeapp.generated.resources.Res
-import kotfinance.composeapp.generated.resources.compose_multiplatform
+import kotfinance.shared.generated.resources.Res
+import kotfinance.shared.generated.resources.compose_multiplatform
 
 @Composable
 @Preview

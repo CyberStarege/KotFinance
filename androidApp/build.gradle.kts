@@ -13,7 +13,7 @@ kotlin {
         }
     }
     dependencies {
-        implementation(projects.kotfinance.composeApp)
+        implementation(projects.kotfinance.shared)
         implementation(libs.androidx.activity.compose)
         implementation(libs.jetbrains.compose.ui.tooling.preview)
         debugImplementation(libs.jetbrains.compose.ui.tooling)

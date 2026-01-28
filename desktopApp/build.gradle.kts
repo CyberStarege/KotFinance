@@ -8,7 +8,7 @@ plugins {
 
 kotlin {
     dependencies {
-        implementation(projects.kotfinance.composeApp)
+        implementation(projects.kotfinance.shared)
 
         implementation(compose.desktop.currentOs)
         implementation(libs.kotlinx.coroutinesSwing)
