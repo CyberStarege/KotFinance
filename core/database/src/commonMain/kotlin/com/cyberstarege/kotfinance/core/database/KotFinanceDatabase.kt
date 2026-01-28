@@ -16,7 +16,6 @@ import com.cyberstarege.kotfinance.core.database.model.AccountGroupEntity
 import com.cyberstarege.kotfinance.core.database.model.CategoryEntity
 import com.cyberstarege.kotfinance.core.database.model.TransactionEntity
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.IO
 
 @Database(
     entities = [
