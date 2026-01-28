@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.multiplatformLibrary)
@@ -11,13 +13,24 @@ kotlin {
 
     androidLibrary {
         namespace = "com.cyberstarege.kotfinance.feature.groups"
-        compileSdk = 36
+        compileSdk = libs.versions.android.compileSdk.get().toInt()
+        minSdk = libs.versions.android.minSdk.get().toInt()
+        compilerOptions {
+            jvmTarget = JvmTarget.JVM_11
+        }
+        androidResources {
+            enable = true
+        }
+        withHostTest {
+            isIncludeAndroidResources = true
+        }
     }
 
     sourceSets {
         commonMain.dependencies {
             implementation(projects.core.designsystem)
             implementation(projects.core.model)
+            implementation(projects.core.domain)
             implementation(libs.jetbrains.compose.runtime)
             implementation(libs.jetbrains.compose.foundation)
             implementation(libs.jetbrains.compose.material3)
@@ -26,6 +39,14 @@ kotlin {
             implementation(libs.jetbrains.compose.ui.tooling.preview)
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
+            implementation(project.dependencies.platform(libs.koin.bom))
+            implementation(libs.koin.core)
+            implementation(libs.koin.compose)
+            implementation(libs.koin.compose.viewmodel)
         }
     }
+}
+
+dependencies {
+    androidRuntimeClasspath(libs.jetbrains.compose.ui.tooling)
 }
