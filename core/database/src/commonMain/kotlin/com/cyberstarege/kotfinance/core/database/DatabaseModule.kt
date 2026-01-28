@@ -1,12 +1,12 @@
 package com.cyberstarege.kotfinance.core.database
 
-import androidx.room.RoomDatabase
+import com.cyberstarege.kotfinance.core.database.dao.AccountGroupDao
+import org.koin.core.module.Module
 import org.koin.dsl.module
 
 val databaseModule = module {
     single<KotFinanceRoomDatabase> {
-        val builder = get<RoomDatabase.Builder<KotFinanceRoomDatabase>>()
-        getKotFinanceRoomDatabase(builder = builder)
+        getKotFinanceRoomDatabase(builder = get())
     }
 
     single { get<KotFinanceRoomDatabase>().getAccountGroupDao() }
@@ -17,3 +17,5 @@ val databaseModule = module {
 
     single { get<KotFinanceRoomDatabase>().getTransactionDao() }
 }
+
+expect val platformModule: Module
