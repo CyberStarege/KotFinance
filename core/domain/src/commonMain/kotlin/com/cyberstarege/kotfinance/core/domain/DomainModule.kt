@@ -7,4 +7,5 @@ import org.koin.dsl.module
 val domainModule = module {
     includes(dataModule)
     factoryOf(::GetAllAccountGroupsUseCase)
+    factoryOf(::AddGroupUseCase)
 }
