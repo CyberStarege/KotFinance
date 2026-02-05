@@ -23,6 +23,8 @@ data class TransactionEntity(
     val id: Long = 0,
     @ColumnInfo(name = "account_id")
     val accountId: Long,
+    @ColumnInfo(name = "category_id")
+    val categoryId: Long,
     val amount: Double,
     val date: Instant,
     val type: TransactionType,
