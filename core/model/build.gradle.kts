@@ -10,9 +10,4 @@ kotlin {
         namespace = "com.cyberstarege.kotfinance.core.model"
         compileSdk = 36
     }
-
-    sourceSets {
-        commonMain.dependencies {
-        }
-    }
 }
