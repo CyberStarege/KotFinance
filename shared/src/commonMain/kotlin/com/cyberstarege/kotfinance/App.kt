@@ -15,6 +15,5 @@ import org.koin.dsl.module
 @Preview
 fun App() {
     KotFinanceTheme {
-
     }
 }
