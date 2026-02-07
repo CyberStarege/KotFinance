@@ -15,6 +15,7 @@ kotlin {
         commonMain.dependencies {
             implementation(projects.kotfinance.core.data)
             implementation(projects.kotfinance.core.model)
+            implementation(libs.kotlinx.coroutines.core)
             implementation(libs.koin.core)
         }
     }
