@@ -20,7 +20,6 @@ kotlin {
             implementation(libs.androidx.room.runtime)
             implementation(libs.androidx.sqlite.bundled)
             implementation(libs.kotlinx.datetime)
-            implementation(project.dependencies.platform(libs.koin.bom))
             implementation(libs.koin.core)
         }
 

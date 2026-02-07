@@ -8,6 +8,6 @@ kotlin {
 
     androidLibrary {
         namespace = "com.cyberstarege.kotfinance.core.model"
-        compileSdk = 36
+        compileSdk = libs.versions.android.compileSdk.get().toInt()
     }
 }

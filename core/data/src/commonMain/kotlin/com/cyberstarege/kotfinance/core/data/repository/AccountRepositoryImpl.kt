@@ -23,10 +23,18 @@ class AccountRepositoryImpl(
     }
 
     override suspend fun getAllAccounts(): Flow<List<Account>> {
-        return accountDao.getAllAccounts().map { it.toModel() }
+        return accountDao.getAllAccounts().map {
+            it.map { accountEntity ->
+                accountEntity.toModel()
+            }
+        }
     }
 
     override suspend fun getAllAccountsForGroup(groupId: Long): Flow<List<Account>> {
-        return accountDao.getAllAccountsForGroup(groupId).map { it.toModel() }
+        return accountDao.getAllAccountsForGroup(groupId).map {
+            it.map { accountEntity ->
+                accountEntity.toModel()
+            }
+        }
     }
 }

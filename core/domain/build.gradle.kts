@@ -8,16 +8,14 @@ kotlin {
 
     androidLibrary {
         namespace = "com.cyberstarege.kotfinance.core.domain"
-        compileSdk = 36
+        compileSdk = libs.versions.android.compileSdk.get().toInt()
     }
 
     sourceSets {
         commonMain.dependencies {
             implementation(projects.kotfinance.core.data)
             implementation(projects.kotfinance.core.model)
-            implementation(project.dependencies.platform(libs.koin.bom))
             implementation(libs.koin.core)
-            implementation(libs.kotlinx.coroutines.core)
         }
     }
 }

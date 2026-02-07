@@ -6,11 +6,10 @@ plugins {
 
 kotlin {
     dependencies {
-        implementation(projects.kotfinance.shared)
+        implementation(projects.kotfinance.composeApp)
         implementation(libs.androidx.activity.compose)
         implementation(libs.jetbrains.compose.ui.tooling.preview)
         debugImplementation(libs.jetbrains.compose.ui.tooling)
-        implementation(project.dependencies.platform(libs.koin.bom))
         implementation(libs.koin.core)
         implementation(libs.koin.android)
     }
