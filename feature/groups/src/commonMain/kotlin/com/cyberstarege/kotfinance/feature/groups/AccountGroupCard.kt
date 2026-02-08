@@ -93,7 +93,7 @@ fun AccountGroupCard(
 
             IconButton(onClick = onEdit) {
                 Icon(
-                    painter = painterResource(KotFinanceIcons.Edit),
+                    painter = KotFinanceIcons.Edit,
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.onSurfaceVariant
                 )

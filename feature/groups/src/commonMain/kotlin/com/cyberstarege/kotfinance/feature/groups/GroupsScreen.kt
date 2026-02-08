@@ -66,7 +66,7 @@ fun GroupsScreen(
                 .padding(end = 16.dp, bottom = 16.dp)
         ) {
             Icon(
-                painter = painterResource(KotFinanceIcons.Add),
+                painter = KotFinanceIcons.Add,
                 contentDescription = null
             )
         }
