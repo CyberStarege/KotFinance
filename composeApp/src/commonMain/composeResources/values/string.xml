@@ -2,6 +2,6 @@
     <string name="app_name">KotFinance</string>
     <string name="main">Главная</string>
     <string name="analytics">Аналитика</string>
-    <string name="groups_account">Кошельки</string>
+    <string name="groups_account">Счета</string>
     <string name="settings">Настройки</string>
 </resources>
