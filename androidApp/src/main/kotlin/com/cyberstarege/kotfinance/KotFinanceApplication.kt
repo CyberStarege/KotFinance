@@ -1,6 +1,7 @@
 package com.cyberstarege.kotfinance
 
 import android.app.Application
+import com.cyberstarege.kotfinance.di.initKoin
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 
