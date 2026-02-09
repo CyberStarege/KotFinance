@@ -15,10 +15,10 @@ interface AccountDao {
     suspend fun insertAccount(account: AccountEntity)
 
     @Query("SELECT * FROM accounts")
-    suspend fun getAllAccounts(): Flow<List<AccountEntity>>
+    fun getAllAccounts(): Flow<List<AccountEntity>>
 
     @Query("SELECT * FROM accounts WHERE account_group_id = :groupId")
-    suspend fun getAllAccountsForGroup(groupId: Long): Flow<List<AccountEntity>>
+    fun getAllAccountsForGroup(groupId: Long): Flow<List<AccountEntity>>
 
     @Update
     suspend fun updateAccount(account: AccountEntity)
