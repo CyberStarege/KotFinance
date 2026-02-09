@@ -1,4 +1,4 @@
-package com.cyberstarege.kotfinance
+package com.cyberstarege.kotfinance.di
 
 import com.cyberstarege.kotfinance.feature.groups.groupsModule
 import org.koin.core.KoinApplication
