@@ -8,10 +8,12 @@ import androidx.navigation3.runtime.NavBackStack
 import androidx.navigation3.runtime.NavKey
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.ui.NavDisplay
+import androidx.window.core.layout.WindowSizeClass
 import com.cyberstarege.kotfinance.feature.groups.GroupsScreen
 
 @Composable
 fun AppNavigation(
+    windowSizeClass: WindowSizeClass,
     navBackStack: NavBackStack<NavKey>,
     modifier: Modifier = Modifier
 ) {
@@ -19,14 +21,14 @@ fun AppNavigation(
         backStack = navBackStack,
         onBack = { navBackStack.removeLastOrNull() },
         entryProvider = entryProvider {
-            appEntry()
+            appEntry(windowSizeClass = windowSizeClass)
         },
         modifier = modifier
     )
 }
 
 
-fun EntryProviderScope<NavKey>.appEntry() {
+fun EntryProviderScope<NavKey>.appEntry(windowSizeClass: WindowSizeClass) {
     entry<Route.Home> {
         Text("Главный экран")
     }
@@ -34,7 +36,7 @@ fun EntryProviderScope<NavKey>.appEntry() {
         Text("Аналитика")
     }
     entry<Route.GroupsAccount> {
-        GroupsScreen()
+        GroupsScreen(windowSizeClass = windowSizeClass)
     }
     entry<Route.Settings> {
         Text("Настройки")

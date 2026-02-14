@@ -10,11 +10,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation3.runtime.NavBackStack
 import androidx.navigation3.runtime.NavKey
+import androidx.window.core.layout.WindowSizeClass
 import com.cyberstarege.kotfinance.navigation.AppNavigation
 import com.cyberstarege.kotfinance.navigation.AppNavigationRail
 
 @Composable
 fun DesktopLayout(
+    windowSizeClass: WindowSizeClass,
     navBackStack: NavBackStack<NavKey>,
     modifier: Modifier = Modifier
 ) {
@@ -29,7 +31,7 @@ fun DesktopLayout(
                 currentKey = navBackStack.lastOrNull(),
                 onNavigate = { navKey -> navBackStack.add(navKey) }
             )
-            AppNavigation(navBackStack)
+            AppNavigation(windowSizeClass, navBackStack)
         }
     }
 

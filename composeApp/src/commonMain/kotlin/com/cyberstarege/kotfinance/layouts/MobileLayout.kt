@@ -6,11 +6,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation3.runtime.NavBackStack
 import androidx.navigation3.runtime.NavKey
+import androidx.window.core.layout.WindowSizeClass
 import com.cyberstarege.kotfinance.navigation.AppBottomBarNavigation
 import com.cyberstarege.kotfinance.navigation.AppNavigation
 
 @Composable
 fun MobileLayout(
+    windowSizeClass: WindowSizeClass,
     navBackStack: NavBackStack<NavKey>,
     modifier: Modifier = Modifier
 ) {
@@ -24,6 +26,7 @@ fun MobileLayout(
         }
     ) { contentPadding ->
         AppNavigation(
+            windowSizeClass = windowSizeClass,
             navBackStack = navBackStack,
             modifier = Modifier.padding(contentPadding)
         )
