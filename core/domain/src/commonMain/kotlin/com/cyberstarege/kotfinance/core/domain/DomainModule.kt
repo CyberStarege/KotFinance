@@ -8,4 +8,6 @@ val domainModule = module {
     includes(dataModule)
     factoryOf(::GetAllAccountGroupsUseCase)
     factoryOf(::AddGroupUseCase)
+    factoryOf(::GetAccountsByGroupIdUseCase)
+    factoryOf(::GetGroupsWithAccountsUseCase)
 }
