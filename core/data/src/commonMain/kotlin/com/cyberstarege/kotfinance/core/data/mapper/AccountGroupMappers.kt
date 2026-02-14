@@ -7,7 +7,6 @@ fun AccountGroupEntity.toAccountGroup(): AccountGroup {
     return AccountGroup(
         id = id,
         name = name,
-        description = description,
         color = color,
         icon = icon,
     )
@@ -17,7 +16,6 @@ fun AccountGroup.toAccountGroupEntity(): AccountGroupEntity {
     return AccountGroupEntity(
         id = id,
         name = name,
-        description = description,
         color = color,
         icon = icon,
     )
