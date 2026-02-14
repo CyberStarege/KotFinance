@@ -40,8 +40,10 @@ import com.cyberstarege.kotfinance.core.model.GroupWithAccounts
 import com.cyberstarege.kotfinance.feature.groups.GroupsUiState
 import kotfinance.feature.groups.generated.resources.Res
 import kotfinance.feature.groups.generated.resources.feature_groups
+import kotfinance.feature.groups.generated.resources.feature_groups_accounts
 import kotfinance.feature.groups.generated.resources.feature_groups_add_account
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 
 @Composable
@@ -127,7 +129,7 @@ fun GroupSection(
                     shape = CircleShape
                 ) {
                     Text(
-                        text = "${accounts.size}",
+                        text = pluralStringResource(Res.plurals.feature_groups_accounts, accounts.size, accounts.size),
                         modifier = Modifier.padding(horizontal = 8.dp, vertical = 2.dp),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
