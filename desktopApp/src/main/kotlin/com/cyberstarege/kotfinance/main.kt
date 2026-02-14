@@ -1,4 +1,4 @@
-package com.cyberstarege.kotfinance.com.cyberstarege.kotfinance
+package com.cyberstarege.kotfinance
 
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
