@@ -1,0 +1,23 @@
+<resources>
+    <string name="feature_groups">Cчета и группы</string>
+    <string name="feature_groups_create_group">Создать группу</string>
+    <string name="feature_groups_add_account">Добавить счет</string>
+    <plurals name="feature_groups_accounts">
+        <item quantity="one">%1$d счет</item>
+        <item quantity="few">%1$d счета</item>
+        <item quantity="many">%1$d счетов</item>
+        <item quantity="other">%1$d счетов</item>
+    </plurals>
+    <string name="feature_groups_create_account">Создать счет</string>
+    <string name="feature_groups_account_name">Название"</string>
+    <string name="feature_groups_account_type">Тип"</string>
+    <string name="feature_groups_account_balance">Баланс"</string>
+    <string name="feature_groups_account_color">Цвет"</string>
+    <string name="feature_groups_cancel">Отмена</string>
+    <string name="feature_groups_save">Сохранить</string>
+    <string name="feature_groups_select_icon">Выбрать иконку</string>
+    <string name="feature_groups_select_color">Выбрать цвет</string>
+    <string name="feature_groups_name_placeholder">Введите название группы</string>
+    <string name="feature_groups_account_name_placeholder">Введите название счета</string>
+    <string name="feature_groups_name">Название группы</string>
+</resources>
