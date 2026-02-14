@@ -25,9 +25,15 @@ fun App(
     KotFinanceTheme {
         BoxWithConstraints {
             if (maxWidth > 600.dp) {
-                DesktopLayout(navBackStack = navBackStack)
+                DesktopLayout(
+                    windowSizeClass = windowSizeClass,
+                    navBackStack = navBackStack
+                )
             } else {
-                MobileLayout(navBackStack = navBackStack)
+                MobileLayout(
+                    windowSizeClass = windowSizeClass,
+                    navBackStack = navBackStack
+                )
             }
         }
     }
